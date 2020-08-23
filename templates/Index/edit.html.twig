@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="u-mt-4">
+        <div class="c-block">
+            <div class="c-block__header">
+                <div class="c-block__header__infos">
+                    <div class="c-block__title">
+                        <div class="icon"><i class="fas fa-user"></i></div>
+                        <span>Vendor user</span>
+                    </div>
+                </div>
+            </div>
+            <div class="c-block__content">
+                <div class="o-container">
+                    <div class="c-form__fieldset o-flex-row">
+                        <div class="o-flex-col-md-12">
+                            <div class="c-form__legend">Identity</div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="first_name">First name</label>
+                                <input id="first_name" type="text" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="last_name">Last name</label>
+                                <input id="last_name" type="text" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="email">Email</label>
+                                <input id="email" type="email" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="website">Website</label>
+                                <input id="website" type="url" class="c-form__field">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-form__fieldset o-flex-row">
+                        <div class="o-flex-col-md-12">
+                            <div class="c-form__legend">Address</div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for=Street>Street</label>
+                                <input id="Street" type="text" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="city">City</label>
+                                <input id="city" type="text" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for=zipcode>Zipcode</label>
+                                <input id="zipcode" type="text" class="c-form__field">
+                            </div>
+                        </div>
+                        <div class="o-flex-col-md-6">
+                            <div class="c-form__row">
+                                <label class="c-form__label" for="country">Country</label>
+                                <select id="country" class="c-form__field"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

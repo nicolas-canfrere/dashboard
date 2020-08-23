@@ -1,0 +1,17 @@
+/////////////////// defaults
+$baseSize: 16px!default;
+////////////////////////////
+
+@function toRem($pxValue) {
+  @return ($pxValue / $baseSize) * 1rem;
+}
+
+@function color($name, $level, $map: $colors) {
+  $levels: map_get($map, $name);
+  $separator: '-';
+  $key: #{$name}#{$separator}#{$level};
+  @if map_has_key($levels, $key) {
+    @return map_get($levels, $key);
+  }
+  @return #fff;
+}

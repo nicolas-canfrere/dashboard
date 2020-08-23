@@ -1,0 +1,49 @@
+.c-tb{
+  display: table;
+  width: 100%;
+}
+
+.c-tb-head{
+  display: table-header-group;
+
+  .tb-col{
+    font-weight: 700;
+    //box-shadow: rgba(#000, .075) 0 -1px 0 inset;
+  }
+}
+
+.c-tb-body {
+  display: table-row-group;
+  .tb-item{
+    .tb-col{
+      background-color: #fff;
+      border: {
+        top: 3px solid transparent;
+        bottom: 3px solid transparent;
+      }
+
+      &:first-child{
+        border-left: 3px solid transparent;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:last-child{
+        border-right: 3px solid transparent;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+
+}
+
+
+.tb-item{
+  display: table-row;
+
+}
+
+.tb-col {
+  display: table-cell;
+  padding: .5rem;
+}

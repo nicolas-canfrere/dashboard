@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ encore_entry_link_tags('master') }}
+    <title>Document</title>
+</head>
+<body>
+<div class="c-topnav">
+    <div class="u-push-right">
+        <div class="c-user-avatar c-user-avatar--sm">
+            <img src="/img/bug.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="o-main-page o-main-page--with-sidebar">
+    <div class="o-sidebar">
+        <div>
+            <ul class="c-sidebar-nav-items">
+                <li class="c-sidebar-nav-item">
+                    <a href="" class="c-sidebar-nav-item__container">
+                        <div class="c-sidebar-nav-item__icon"><i class="fas fa-cog"></i></div>
+                        <span class="c-sidebar-nav-item__label">Lorem</span>
+                    </a>
+                </li>
+                <li class="c-sidebar-nav-item current">
+                    <a href="" class="c-sidebar-nav-item__container">
+                        <div class="c-sidebar-nav-item__icon"><i class="fas fa-cog"></i></div>
+                        <span class="c-sidebar-nav-item__label">Administration</span>
+                    </a>
+                    <ul class="c-sidebar-nav-sub-items">
+                        <li class="c-sidebar-nav-sub-item current">
+                            <a href="#" class="c-sidebar-nav-item__container">
+                                <span class="c-sidebar-nav-item__label">Utilisateurs</span>
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-sub-item">
+                            <a href="#" class="c-sidebar-nav-item__container">
+                                <span class="c-sidebar-nav-item__label">Equipes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="o-page-content">
+        <div class="o-container">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+{% block footscripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>

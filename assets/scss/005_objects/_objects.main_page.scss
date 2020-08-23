@@ -1,0 +1,23 @@
+.o-main-page {
+  &.o-main-page--with-sidebar{
+    padding-left: 0;
+    transition: padding-left .3s;
+  }
+
+  @media screen and (min-width: 768px) {
+    &.o-main-page--with-sidebar{
+      padding-left: $sidebarSmallWidth;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &.o-main-page--with-sidebar{
+      padding-left: $sidebarWidth;
+    }
+  }
+}
+
+.o-page-content{
+  position: relative;
+  padding-top: $topnavHeight;
+}

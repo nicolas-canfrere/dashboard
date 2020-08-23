@@ -1,0 +1,48 @@
+/////////////////// defaults
+$blockBgc: #fff!default;
+////////////////////////////
+
+.c-block{
+  //background-color: $blockBgc;
+  padding-bottom: 1rem;
+  border-radius: toRem(4px);
+}
+
+.c-block__header{
+  display: flex;
+  padding: 1rem 1rem 0;
+}
+
+.c-block__header__infos{
+}
+
+.c-block__title{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: color(blue, 'mid');
+  display: flex;
+  align-items: center;
+  .icon{
+    margin-right: .5rem;
+  }
+}
+
+.c-block__subtitle{
+  margin-top: .5rem;
+  font-size: .8rem;
+  color: color(blue, '050');
+}
+
+.c-block__header__actions{
+  margin-left: auto;
+  flex: 0 1 auto;
+}
+
+.c-block__content{
+  padding: 1rem 1rem 0;
+}
+
+.c-block__footer{
+  padding: 1rem 1rem 0;
+}

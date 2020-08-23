@@ -1,0 +1,7 @@
+input, select, textarea{
+  outline: none;
+  &:focus {
+    outline: none;
+    box-shadow: color(blue, '040') 0 0 3px;
+  }
+}

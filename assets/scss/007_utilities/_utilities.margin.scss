@@ -1,0 +1,37 @@
+$spacingPrefixes: ('left':'l', 'top':'t', 'right':'r', 'bottom':'b');
+// 4 : 1rem, 8 : 2rem, 12 : 3rem, 16 : 4rem ... 40 : 10rem
+@mixin margins($i) {
+  $j: 0;
+  @if $i != 0 {
+    $j: $i * .25rem;
+  }
+
+  .u-m-#{$i} {
+    margin: $j;
+  }
+
+  .u-mx-#{$i} {
+    margin-left: $j;
+    margin-right: $j;
+  }
+
+  .u-my-#{$i} {
+    margin-top: $j;
+    margin-bottom: $j;
+  }
+
+  @each $long, $short in $spacingPrefixes {
+    .u-m#{$short}-#{$i} {
+      margin-#{$long}: $j;
+    }
+  }
+}
+
+.u-my-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@for $i from 0 through 40 {
+  @include margins($i);
+}

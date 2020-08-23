@@ -1,0 +1,88 @@
+$gray-000: #dedfe3;
+$gray-010: #c7cad1;
+$gray-020: #b1b5be;
+$gray-030: #9ba0ab;
+$gray-040: #858a99;
+$gray-050: #6f7685;
+$gray-060: #5c616e;
+$gray-070: #4a4e59;
+$gray-080: #383b43;
+$gray-090: #2e3138;
+$gray-100: #25272c;
+$gray-110: #1c1d21;
+$gray-120: #131416;
+
+$gray-map: (
+        gray-xlight: $gray-000,
+        gray-light: $gray-030,
+        gray-mid: $gray-060,
+        gray-dark: $gray-090,
+        gray-xdark: $gray-120,
+        gray-000: $gray-000,
+        gray-010: $gray-010,
+        gray-020: $gray-020,
+        gray-030: $gray-030,
+        gray-040: $gray-040,
+        gray-050: $gray-050,
+        gray-060: $gray-060,
+        gray-070: $gray-070,
+        gray-080: $gray-080,
+        gray-090: $gray-090,
+        gray-100: $gray-100,
+        gray-110: $gray-110,
+        gray-120: $gray-120,
+);
+
+
+$blue-000: #f0f3fa;
+$blue-010: #e0e7f5;
+$blue-020: #c2ceeb;
+$blue-030: #a3b6e0;
+$blue-040: #859dd6;
+$blue-050: #6685cc;
+$blue-060: #3e64bb;
+$blue-070: #385aa8;
+$blue-080: #2e498a;
+$blue-090: #24396b;
+$blue-100: #19294d;
+$blue-110: #0f182e;
+$blue-120: #05080f;
+
+$blue-map: (
+        blue-xlight: $blue-000,
+        blue-light: $blue-030,
+        blue-mid: $blue-060,
+        blue-dark: $blue-090,
+        blue-xdark: $blue-120,
+        blue-000: $blue-000,
+        blue-010: $blue-010,
+        blue-020: $blue-020,
+        blue-030: $blue-030,
+        blue-040: $blue-040,
+        blue-050: $blue-050,
+        blue-060: $blue-060,
+        blue-070: $blue-070,
+        blue-080: $blue-080,
+        blue-090: $blue-090,
+        blue-100: $blue-100,
+        blue-110: $blue-110,
+        blue-120: $blue-120
+);
+
+$interface: (
+        interface-success: #4BA3A6,
+        interface-danger: #C25F61,
+        interface-info: $blue-030,
+        interface-warning: #DCB760,
+        interface-neutral: #ddd
+);
+
+$color-maps: (
+        $gray-map, $blue-map, $interface,
+);
+
+$colors: (
+        gray: $gray-map,
+        blue: $blue-map,
+        interface: $interface,
+);

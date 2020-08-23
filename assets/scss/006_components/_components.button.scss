@@ -1,0 +1,50 @@
+/////////////////// defaults
+$btnDefaultBgc: color(gray, xlight)!default;
+$btnDefaultFgc: color(gray, '040')!default;
+$btnPrimaryBgc: color(blue, mid)!default;
+$btnPrimaryFgc: #fff!default;
+$btnPrimaryBgcHover: lighten($btnPrimaryBgc, 5)!default;
+$btnSecondaryBgc: color(blue, light)!default;
+$btnSecondaryFgc: #fff!default;
+$btnSecondaryBgcHover: lighten($btnSecondaryBgc, 5)!default;
+////////////////////////////
+
+.c-btn{
+  @include baseButton;
+  padding: .5rem .75rem;
+  background-color: $btnDefaultBgc;
+  border-radius: toRem(4px);
+  color: $btnDefaultFgc;
+  @include prettyOverFx;
+}
+
+.c-btn--primary{
+  background-color: $btnPrimaryBgc;
+  color: $btnPrimaryFgc;
+  &:hover{
+    background-color: $btnPrimaryBgcHover;
+  }
+}
+
+.c-btn--secondary{
+  background-color: $btnSecondaryBgc;
+  color: $btnSecondaryFgc;
+  &:hover{
+    background-color: $btnSecondaryBgcHover;
+  }
+}
+
+.c-btn--icon-left{
+  @media screen and (min-width: 768px) {
+    .icon{
+      margin-right: .75rem;
+    }
+  }
+}
+.c-btn--icon-right{
+  @media screen and (min-width: 768px) {
+    .icon{
+      margin-left: .75rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+$baseSize: 16px;
+$defaultLineHeight: 1.5;
+$defaultFontFamily: 'Source Sans Pro', sans-serif;
+$defaultFontcolor: color(gray, '050');
+$defaultBorderRadius: toRem(4px);
+
+$bodyBgc: lighten(color(blue, '000'), 2);
+
+$topnavHeight: 50px;
+$topnavZindex: 1000;
+$topnavBgc: #fff;
+
+$sidebarSmallWidth: 50px;
+$sidebarWidth: 220px;
+$sidebarZindex: 990;
+$sidebarBgc: #fff;

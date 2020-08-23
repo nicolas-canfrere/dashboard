@@ -1,0 +1,176 @@
+/////////////////// defaults
+$listBgc: #fff !default;
+$listDefaultTeamColor: color(gray, 'xlight') !default;
+////////////////////////////
+.c-list {
+}
+
+.c-list__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 .5rem;
+  @include prettyOverFx;
+  margin-top: .5rem;
+  background-color: $listBgc;
+  border-radius: $defaultBorderRadius;
+  border-left: 5px solid $listDefaultTeamColor;
+
+  & > div {
+    padding: 0 .5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.c-list__inner-menu__wrapper {
+  position: relative;
+
+  &:hover > .c-list__inner-menu {
+    display: flex;
+  }
+
+  .c-list__inner-menu__toggler {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .c-list__inner-menu {
+    display: flex;
+
+    li {
+      display: inline-flex;
+    }
+
+    li a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: toRem(32px);
+      height: toRem(32px);
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate3d(-100%, -50%, 0);
+      border-radius: toRem(4px);
+      z-index: 500;
+      margin-right: .5rem;
+      color: #fff;
+      background-color: color(blue, light);
+
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate3d(100%, -50%, 0);
+        display: block;
+        content: '';
+        border: {
+          top: 7px solid transparent;
+          right: 7px solid transparent;
+          bottom: 7px solid transparent;
+          left: 7px solid color(blue, light);
+        }
+      }
+
+    }
+  }
+}
+
+.c-list-tools {
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  & + .c-list{
+    margin-top: .5rem;
+  }
+  & > *{
+    margin-top: .5rem!important;
+    &:first-child{
+      margin-top: 0!important;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    flex-direction: row;
+    & > *{
+      margin-top: 0!important;
+    }
+  }
+}
+.c-list-search{
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  input[type=text], input[type=search] {
+    height: 30px;
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    border-radius: $defaultBorderRadius;
+    padding: 0 1.2rem 0 .5rem;
+  }
+  .icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    color: color(blue, light);
+  }
+}
+.c-list-pagination{
+  display: flex;
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .25rem;
+    &:first-child{
+      padding-left: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+    }
+    a, span{
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      text-decoration: none;
+      background-color: #fff;
+      border-radius: $defaultBorderRadius;
+      @include prettyOverFx;
+      &.disabled{
+        background-color: color(gray, '000');
+        color: color(gray, '010');
+      }
+      &.current{
+        background-color: color(blue, light);
+        color: #fff;
+      }
+    }
+  }
+}

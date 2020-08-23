@@ -1,0 +1,15 @@
+/////////////////// defaults
+$baseSize: 16px!default;
+$defaultLineHeight: 1.5!default;
+$defaultFontFamily: Arial, sans!default;
+$defaultFontcolor: #000!default;
+$bodyBgc: #fff!default;
+////////////////////////////
+
+body{
+  font-size: toRem($baseSize);
+  line-height: $defaultLineHeight;
+  font-family: $defaultFontFamily;
+  color: $defaultFontcolor;
+  background-color: $bodyBgc;
+}

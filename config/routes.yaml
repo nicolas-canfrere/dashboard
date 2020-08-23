@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+edit:
+    path: /edit
+    controller: App\Controller\IndexController::edit

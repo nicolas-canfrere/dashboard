@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="u-mt-4">
+        <div class="c-block">
+            <div class="c-block__header">
+                <div class="c-block__header__infos">
+                    <div class="c-block__title">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <span>Vendor users</span>
+                    </div>
+                    <div class="c-block__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam,
+                        saepe!
+                    </div>
+                </div>
+                <div class="c-block__header__actions">
+                    <ul class="u-flex-list">
+                        <li><a href="#" class="c-btn c-btn--primary c-btn--icon-left"><div class="icon"><i class="fas fa-user-plus"></i></div><span class="u-hide-mobile">Add User</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="c-block__content">
+                <div class="c-list-tools">
+                    <div class="c-list-search">
+                        <input type="text">
+                        <div class="icon"><i class="fas fa-search"></i></div>
+                    </div>
+                    <ul class="c-list-pagination">
+                        <li class="c-list-pagination__arrow">
+                            <span class="disabled"><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></span>
+                        </li>
+                        <li class="c-list-pagination__arrow">
+                            <span class="disabled"><i class="fas fa-caret-left"></i></span>
+                        </li>
+                        <li class="c-list-pagination__page">
+                            <span class="current">1</span>
+                        </li>
+                        <li class="c-list-pagination__page">
+                            <span><i class="fas fa-ellipsis-h"></i></span>
+                        </li>
+                        <li class="c-list-pagination__page">
+                            <a href="">999</a>
+                        </li>
+                        <li class="c-list-pagination__arrow">
+                            <a href=""><i class="fas fa-caret-right"></i></a>
+                        </li>
+                        <li class="c-list-pagination__arrow">
+                            <a href=""><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="c-list">
+                    <li class="c-list__row" style="border-left-color: #3e64bb;">
+                        <div class="">#</div>
+                        <div class="u-hide-mobile"><div class="c-user-avatar"><img src="/img/bug.jpg" alt=""></div></div>
+                        <div class="o-flex-col-md-2"><a href="{{ path('edit') }}">Nicolas</a></div>
+                        <div class="o-flex-col-md-2"><a href="{{ path('edit') }}">Canfrere</a></div>
+                        <div class="o-flex-col-md-2 u-text-ellipsis"><a href="{{ path('edit') }}">john.doe@example.com</a></div>
+                        <div class="u-push-right">
+                            <div class="c-switcher">
+                                <label for="sw0">
+                                    <input type="checkbox" id="sw0">
+                                    <span class="c-switcher__label">activé</span>
+                                    <span class="c-switcher__box"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="c-list__inner-menu__wrapper">
+                            <a href="#" class="c-list__inner-menu__toggler"><i class="fas fa-ellipsis-h"></i></a>
+                            <ul class="c-list__inner-menu">
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                <li><a href="{{ path('edit') }}"><i class="fas fa-pen"></i></a></li>
+                                <li><a href="#"><i class="fas fa-trash-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    {% for i in 1..14 %}
+                        <li class="c-list__row">
+                            <div class="">#</div>
+                            <div class="u-hide-mobile"><div class="c-user-avatar">jd</div></div>
+                            <div class="o-flex-col-md-2">John</div>
+                            <div class="o-flex-col-md-2">Doe</div>
+                            <div class="o-flex-col-md-2 u-text-ellipsis">john.doe@example.com</div>
+                            <div class="u-push-right">
+                                <div class="c-switcher">
+                                    <label for="{{ 'sw'~i }}">
+                                        <input type="checkbox" id="{{ 'sw'~i }}">
+                                        <span class="c-switcher__label">activé</span>
+                                        <span class="c-switcher__box"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="c-list__inner-menu__wrapper">
+                                <a href="#" class="c-list__inner-menu__toggler"><i class="fas fa-ellipsis-h"></i></a>
+                                <ul class="c-list__inner-menu">
+                                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                    <li><a href="{{ path('edit') }}"><i class="fas fa-pen"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-trash-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

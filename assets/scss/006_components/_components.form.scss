@@ -1,0 +1,50 @@
+.c-form__fieldset{
+  margin-top: 1rem;
+}
+
+.c-form__legend{
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=email],
+input[type=url],
+textarea,
+select {
+  &.c-form__field{
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border-radius: $defaultBorderRadius;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1;
+    color: inherit;
+    background-color: #fff;
+    padding: 0 1rem;
+  }
+}
+
+select.c-form__field{
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+.c-form__row{
+  margin-bottom: .5rem;
+}
+
+.c-form__label{
+  font-weight: 700;
+  display: block;
+  user-select: none;
+  & + .c-form__field{
+    margin-top: .25rem;
+  }
+}

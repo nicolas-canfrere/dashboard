@@ -1,0 +1,33 @@
+$spacingPrefixes: ('left':'l', 'top':'t', 'right':'r', 'bottom':'b');
+// 4 : 1rem, 8 : 2rem, 12 : 3rem, 16 : 4rem ... 40 : 10rem
+@mixin paddings($i) {
+  $j: 0;
+  @if $i != 0 {
+    $j: $i * .25rem;
+  }
+
+  .u-p-#{$i} {
+    padding: $j;
+  }
+
+  .u-px-#{$i} {
+    padding-left: $j;
+    padding-right: $j;
+  }
+
+  .u-py-#{$i} {
+    padding-top: $j;
+    padding-bottom: $j;
+  }
+
+  @each $long, $short in $spacingPrefixes {
+    .u-p#{$short}-#{$i} {
+      padding-#{$long}: $j;
+    }
+  }
+}
+
+
+@for $i from 0 through 40 {
+  @include paddings($i);
+}
