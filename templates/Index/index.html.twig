@@ -50,41 +50,18 @@
                     </ul>
                 </div>
                 <ul class="c-list">
-                    <li class="c-list__row" style="border-left-color: #3e64bb;">
-                        <div class="">#</div>
-                        <div class="u-hide-mobile"><div class="c-user-avatar"><img src="/img/bug.jpg" alt=""></div></div>
-                        <div class="o-flex-col-md-2"><a href="{{ path('edit') }}">Nicolas</a></div>
-                        <div class="o-flex-col-md-2"><a href="{{ path('edit') }}">Canfrere</a></div>
-                        <div class="o-flex-col-md-2 u-text-ellipsis"><a href="{{ path('edit') }}">john.doe@example.com</a></div>
-                        <div class="u-push-right">
-                            <div class="c-switcher">
-                                <label for="sw0">
-                                    <input type="checkbox" id="sw0">
-                                    <span class="c-switcher__label">activé</span>
-                                    <span class="c-switcher__box"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="c-list__inner-menu__wrapper">
-                            <a href="#" class="c-list__inner-menu__toggler"><i class="fas fa-ellipsis-h"></i></a>
-                            <ul class="c-list__inner-menu">
-                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                                <li><a href="{{ path('edit') }}"><i class="fas fa-pen"></i></a></li>
-                                <li><a href="#"><i class="fas fa-trash-alt"></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    {% for i in 1..14 %}
-                        <li class="c-list__row">
+                    {% for user in users %}
+                        <li class="c-list__row" style="border-left-color: #3e64bb;">
                             <div class="">#</div>
-                            <div class="u-hide-mobile"><div class="c-user-avatar">jd</div></div>
-                            <div class="o-flex-col-md-2">John</div>
-                            <div class="o-flex-col-md-2">Doe</div>
-                            <div class="o-flex-col-md-2 u-text-ellipsis">john.doe@example.com</div>
+                            <div class="u-hide-mobile"><div class="c-user-avatar">{{ user.initials }}</div></div>
+                            <div class="o-flex-col-md-2"><a href="{{ path('edit', {id: loop.index}) }}">{{ user.firstName }}</a></div>
+                            <div class="o-flex-col-md-2"><a href="{{ path('edit', {id: loop.index}) }}">{{ user.lastName }}</a></div>
+                            <div class="o-flex-col-md-2 u-text-ellipsis"><a href="{{ path('edit', {id: loop.index}) }}">{{ user.email }}</a></div>
                             <div class="u-push-right">
                                 <div class="c-switcher">
-                                    <label for="{{ 'sw'~i }}">
-                                        <input type="checkbox" id="{{ 'sw'~i }}">
+                                    <label for="{{ 'sw'~loop.index }}">
+                                        {% set checked = user.activated ? 'checked' : '' %}
+                                        <input type="checkbox" id="{{ 'sw'~loop.index }}" {{ checked }}>
                                         <span class="c-switcher__label">activé</span>
                                         <span class="c-switcher__box"></span>
                                     </label>
@@ -94,7 +71,7 @@
                                 <a href="#" class="c-list__inner-menu__toggler"><i class="fas fa-ellipsis-h"></i></a>
                                 <ul class="c-list__inner-menu">
                                     <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                                    <li><a href="{{ path('edit') }}"><i class="fas fa-pen"></i></a></li>
+                                    <li><a href="{{ path('edit', {id: loop.index}) }}"><i class="fas fa-pen"></i></a></li>
                                     <li><a href="#"><i class="fas fa-trash-alt"></i></a></li>
                                 </ul>
                             </div>

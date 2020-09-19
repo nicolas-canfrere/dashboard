@@ -20,19 +20,19 @@
                         <div class="o-flex-col-md-6">
                             <div class="c-form__row">
                                 <label class="c-form__label" for="first_name">First name</label>
-                                <input id="first_name" type="text" class="c-form__field">
+                                <input id="first_name" type="text" class="c-form__field" value="{{ user.firstName }}">
                             </div>
                         </div>
                         <div class="o-flex-col-md-6">
                             <div class="c-form__row">
                                 <label class="c-form__label" for="last_name">Last name</label>
-                                <input id="last_name" type="text" class="c-form__field">
+                                <input id="last_name" type="text" class="c-form__field" value="{{ user.lastName }}">
                             </div>
                         </div>
                         <div class="o-flex-col-md-6">
                             <div class="c-form__row">
                                 <label class="c-form__label" for="email">Email</label>
-                                <input id="email" type="email" class="c-form__field">
+                                <input id="email" type="email" class="c-form__field" value="{{ user.email }}">
                             </div>
                         </div>
                         <div class="o-flex-col-md-6">
@@ -68,6 +68,14 @@
                             <div class="c-form__row">
                                 <label class="c-form__label" for="country">Country</label>
                                 <select id="country" class="c-form__field"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-form__fieldset o-flex-row">
+                        <div class="o-flex-col-md-12">
+                            <div class="c-form__row u-text-right">
+                                <button class="c-btn c-btn--secondary" type="reset">Cancel</button>
+                                <button class="c-btn c-btn--primary">Save</button>
                             </div>
                         </div>
                     </div>

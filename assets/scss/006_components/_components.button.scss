@@ -16,6 +16,12 @@ $btnSecondaryBgcHover: lighten($btnSecondaryBgc, 5)!default;
   border-radius: toRem(4px);
   color: $btnDefaultFgc;
   @include prettyOverFx;
+  outline: none;
+  min-height: 40px;
+  &:focus{
+    outline: none;
+    box-shadow: color(blue, '040') 0 0 0 2px;
+  }
 }
 
 .c-btn--primary{

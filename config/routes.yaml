@@ -3,5 +3,5 @@ index:
     controller: App\Controller\IndexController::index
 
 edit:
-    path: /edit
+    path: /edit/{id}
     controller: App\Controller\IndexController::edit
